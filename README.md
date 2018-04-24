@@ -11,4 +11,4 @@
   <li>Perfiles de usuario</li>
   <li>Ranquin de jugadores</li>
   <li>mejores jugadas</li>
-</ul>10.14.3.86
+</ul>
