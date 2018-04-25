@@ -18,10 +18,10 @@ public class PartidaModelo extends Conector{
 			while(rs.next()){
 				Partida partida = new Partida();
 				partida.setCod(rs.getInt("cod"));
-				partida.setJugador(UsuarioModelo.select(rs.getInt("cod")));
+				partida.setJugador(usuarioModelo.select(rs.getInt("cod")));
 				partida.setDificultad(rs.getString("dificultad"));
 				partida.setGanador(rs.getString("ganador"));
-				partida.setJuego(JuegoModelo.select(rs.getInt("cod")));
+				partida.setJuego(juegoModelo.select(rs.getInt("cod")));
 						
 				listaPartidas.add(partida);
 			}

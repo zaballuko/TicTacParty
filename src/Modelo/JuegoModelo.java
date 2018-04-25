@@ -27,13 +27,13 @@ public class JuegoModelo extends Conector{
 		return listaJuegos;
 	}
 	
-	public static Juego select(int id){
+	public Juego select(int id){
 		// crear juego
 		Juego juego = new Juego();
 
 		// ejecutar consulta
 		try {
-			Statement st = conexion.createStatement();
+			Statement st = super.conexion.createStatement();
 			ResultSet rs = st.executeQuery("SELECT * FROM juegos WHERE cod= " + id);
 				while (rs.next()) {
 					juego.setCod(rs.getInt("cod"));
