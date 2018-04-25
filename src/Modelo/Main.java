@@ -14,7 +14,6 @@ public class Main {
 			usuario = (Usuario) it.next();
 			System.out.println("El usuario es " + usuario.getNombre());
 		}
-		
 
 	}
 

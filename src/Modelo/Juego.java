@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.util.ArrayList;
+
 public class Juego extends Conector{
 
 	//Atributos
@@ -7,7 +9,7 @@ public class Juego extends Conector{
 	private String nombre;
 	private String dificultad;
 	private int part_jugadas;
-	private Partida [] partidas;
+	private ArrayList<Partida> partidas;
 	
 	
 	//Getters y Setters
@@ -35,12 +37,13 @@ public class Juego extends Conector{
 	public void setPart_jugadas(int part_jugadas) {
 		this.part_jugadas = part_jugadas;
 	}
-	public Partida[] getPartidas() {
+	public ArrayList<Partida> getPartidas() {
 		return partidas;
 	}
-	public void setPartidas(Partida[] partidas) {
+	public void setPartidas(ArrayList<Partida> partidas) {
 		this.partidas = partidas;
 	}
+	
 	
 	
 }

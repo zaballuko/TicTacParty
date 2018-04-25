@@ -8,6 +8,8 @@ public class Partida extends Conector{
 	private String dificultad;
 	private String ganador;
 	private Juego juego;
+	
+	
 	public int getCod() {
 		return cod;
 	}
