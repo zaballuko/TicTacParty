@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class Conector {
 
+
 	protected Connection conexion;
-	
 	
 	Conector(){
 		try {
