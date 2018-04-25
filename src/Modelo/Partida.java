@@ -8,11 +8,7 @@ public class Partida extends Conector{
 	private String dificultad;
 	private String ganador;
 	private Juego juego;
-<<<<<<< HEAD
-=======
-	
-	
->>>>>>> branch 'master' of https://github.com/zaballuko/TicTacParty.git
+
 	public int getCod() {
 		return cod;
 	}

@@ -17,6 +17,8 @@ public class PartidaModelo extends Conector{
 			ResultSet rs = st.executeQuery("SELECT * FROM partidas");
 			while(rs.next()){
 				Partida partida = new Partida();
+				UsuarioModelo usuarioModelo = new UsuarioModelo();
+				JuegoModelo juegoModelo = new JuegoModelo();
 				partida.setCod(rs.getInt("cod"));
 				partida.setJugador(usuarioModelo.select(rs.getInt("cod")));
 				partida.setDificultad(rs.getString("dificultad"));
