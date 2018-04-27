@@ -20,7 +20,7 @@ public class PartidaModelo extends Conector{
 				UsuarioModelo usuarioModelo = new UsuarioModelo();
 				JuegoModelo juegoModelo = new JuegoModelo();
 				partida.setCod(rs.getInt("cod"));
-				partida.setJugador(usuarioModelo.select(rs.getInt("cod")));
+				partida.setJugador(usuarioModelo.selectPorCod(rs.getInt("cod")));
 				partida.setDificultad(rs.getString("dificultad"));
 				partida.setGanador(rs.getString("ganador"));
 				partida.setJuego(juegoModelo.select(rs.getInt("cod")));
