@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 
@@ -31,6 +32,19 @@ public class PartidaModelo extends Conector{
 			e.printStackTrace();
 		}
 		return listaPartidas;
+	}
+	
+	public int partidasJugadas(){
+		PartidaModelo partidaModelo = new PartidaModelo();
+		ArrayList<Partida> listaPartidas = partidaModelo.selectAll();
+		int contPartida=0;
+		Iterator<Partida> itPartida = listaPartidas.iterator();
+		while (itPartida.hasNext()){
+			Partida partida = new Partida();
+			partida = (Partida) itPartida.next();
+			contPartida++;
+		}
+		return contPartida;
 	}
 
 }
