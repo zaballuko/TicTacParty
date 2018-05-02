@@ -35,10 +35,10 @@ public class Partida extends Conector{
 	public void setGanador(String ganador) {
 		this.ganador = ganador;
 	}
-	public Nivel getJuego() {
+	public Nivel getNivel() {
 		return nivel;
 	}
-	public void setJuego(Nivel juego) {
+	public void setNivel(Nivel juego) {
 		this.nivel = juego;
 	}
 

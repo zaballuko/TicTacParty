@@ -24,7 +24,7 @@ public class PartidaModelo extends Conector{
 				partida.setJugador(usuarioModelo.selectPorCod(rs.getInt("cod")));
 				partida.setDificultad(rs.getString("dificultad"));
 				partida.setGanador(rs.getString("ganador"));
-				partida.setJuego(juegoModelo.select(rs.getInt("cod")));
+				partida.setNivel(juegoModelo.select(rs.getInt("cod")));
 						
 				listaPartidas.add(partida);
 			}
