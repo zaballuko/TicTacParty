@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import Modelo.Partida;
 
-public class GuardarNumPartida extends HttpServlet{
+public class GuardarPartida extends HttpServlet{
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String numPartidas = request.getParameter("numPartidas");
