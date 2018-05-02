@@ -89,9 +89,9 @@ function GameUi() {
 		},
 		endScreen = function() {
 			var audio = new Audio('audio/audiooh.mp3');
-			var contadorGanar;
-			var contadorPerder;
-			var contadorPartidas;
+			var contadorGanar = 0;
+			var contadorPerder = 0;
+			var contadorPartidas = 0;
 			var oScreen = Tool.getE('#end_screen');
 			var oEndInfo = Tool.getE('#end_info');
 			
@@ -119,10 +119,10 @@ function GameUi() {
 			
 
 			//enviar datos a jsp para guardar numero departidas
-					//$.post( "http://10.14.3.86/TicTacParty/GuardarNumPartida",  { numPartidas: contadorPartidas})
-  						//.done(function( data ) {
-   							// alert( "Data Loaded: " + data );
-  					//});
+					$.post( "http://localhost:8080/TicTacParty/GuardarNumPartida",  { numPartidas: contadorPartidas, numGanadas: contadorGanar})
+  						.done(function( data ) {
+   							alert( "Data Loaded: " + data );
+  					});
 
 			oScreen.style['display'] = 'block';
 			var btnRestart = Tool.getE('#btn_restart');
