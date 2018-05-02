@@ -13,6 +13,7 @@ public class Usuario extends Conector{
 	private int edad;
 	private String rol;
 	private int telefono;
+	private ArrayList<Partida> partidas;
 	
 	//Getters y Setters
 	public int getCod() {
@@ -62,6 +63,12 @@ public class Usuario extends Conector{
 	}
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
+	}
+	public ArrayList<Partida> getPartidas() {
+		return partidas;
+	}
+	public void setPartidas(ArrayList<Partida> partidas) {
+		this.partidas = partidas;
 	}
 
 	

@@ -34,17 +34,26 @@ public class PartidaModelo extends Conector{
 		return listaPartidas;
 	}
 	
-	public int partidasJugadas(){
+	public void partidasJugadas(){
 		PartidaModelo partidaModelo = new PartidaModelo();
 		ArrayList<Partida> listaPartidas = partidaModelo.selectAll();
 		int contPartida=0;
+		int contGanado=0;
+		int contPerdido=0;
+		int contEmpate=0;
 		Iterator<Partida> itPartida = listaPartidas.iterator();
 		while (itPartida.hasNext()){
-			Partida partida = new Partida();
-			partida = (Partida) itPartida.next();
+			Partida partida = itPartida.next();
 			contPartida++;
+			if(partida.getGanador().equals('0')){
+				contGanado++;
+			}else if(partida.getGanador().equals('1')){
+				contPerdido++;
+			}else{
+				contEmpate++;
+			}
 		}
-		return contPartida;
+		System.out.println("El numero de partidad jugadas es: "+contPartida+" ha ganado un total de: "+contGanado+". Ha perdido un total de: "+contPerdido+". Ha empatado un total de: "+contEmpate);
 	}
 
 }
