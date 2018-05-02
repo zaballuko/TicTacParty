@@ -29,8 +29,6 @@ public class UsuarioModelo extends Conector{
 				usuario.setEdad(rs.getInt("edad"));
 				usuario.setRol(rs.getString("rol"));
 				usuario.setTelefono(rs.getInt("telefono"));
-				usuario.setPart_ganadas(rs.getInt("part_ganadas"));
-				usuario.setPart_jugadas(rs.getInt("part_jugadas"));
 				listaUsuarios.add(usuario);
 			}
 		} catch (SQLException e) {
@@ -58,9 +56,7 @@ public class UsuarioModelo extends Conector{
 				usuario.setApellidos(rs.getString("apellidos"));
 				usuario.setEdad(rs.getInt("edad"));
 				usuario.setRol(rs.getString("rol"));
-				usuario.setTelefono(rs.getInt("telefono"));
-				usuario.setPart_ganadas(rs.getInt("part_ganadas"));
-				usuario.setPart_jugadas(rs.getInt("part_jugadas"));				
+				usuario.setTelefono(rs.getInt("telefono"));		
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -87,8 +83,6 @@ public class UsuarioModelo extends Conector{
 				usuario.setEdad(rs.getInt("edad"));
 				usuario.setRol(rs.getString("rol"));
 				usuario.setTelefono(rs.getInt("telefono"));
-				usuario.setPart_ganadas(rs.getInt("part_ganadas"));
-				usuario.setPart_jugadas(rs.getInt("part_jugadas"));
 				listaRanking.add(usuario);
 			}
 		} catch (SQLException e) {

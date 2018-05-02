@@ -18,7 +18,6 @@ public class JuegoModelo extends Conector{
 				juego.setCod(rs.getInt("cod"));
 				juego.setNombre(rs.getString("nombre"));
 				juego.setDificultad(rs.getString("dificultad"));
-				juego.setPart_jugadas(rs.getInt("part_jugadas"));
 				listaJuegos.add(juego);
 			}
 		} catch (SQLException e) {
@@ -39,7 +38,6 @@ public class JuegoModelo extends Conector{
 					juego.setCod(rs.getInt("cod"));
 					juego.setNombre(rs.getString("nombre"));
 					juego.setDificultad(rs.getString("dificultad"));
-					juego.setPart_jugadas(rs.getInt("part_jugadas"));
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
