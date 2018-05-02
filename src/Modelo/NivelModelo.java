@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class JuegoModelo extends Conector{
+public class NivelModelo extends Conector{
 	
 	public ArrayList<Nivel> selectAll(){
 		ArrayList<Nivel> listaJuegos = new ArrayList<Nivel>();
