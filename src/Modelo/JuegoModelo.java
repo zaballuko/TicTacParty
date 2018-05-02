@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 public class JuegoModelo extends Conector{
 	
-	public ArrayList<Juego> selectAll(){
-		ArrayList<Juego> listaJuegos = new ArrayList<Juego>();
+	public ArrayList<Nivel> selectAll(){
+		ArrayList<Nivel> listaJuegos = new ArrayList<Nivel>();
 		try {
 			Statement st = conexion.createStatement();
 			ResultSet rs = st.executeQuery("SELECT * FROM juegos");
 			while(rs.next()){
-				Juego juego = new Juego();
+				Nivel juego = new Nivel();
 				juego.setCod(rs.getInt("cod"));
 				juego.setNombre(rs.getString("nombre"));
 				juego.setDificultad(rs.getString("dificultad"));
@@ -27,9 +27,9 @@ public class JuegoModelo extends Conector{
 		return listaJuegos;
 	}
 	
-	public Juego select(int id){
+	public Nivel select(int id){
 		// crear juego
-		Juego juego = new Juego();
+		Nivel juego = new Nivel();
 
 		// ejecutar consulta
 		try {

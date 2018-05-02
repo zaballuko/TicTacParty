@@ -3,7 +3,7 @@ package Modelo;
 
 import java.util.ArrayList;
 
-public class Juego extends Conector{
+public class Nivel extends Conector{
 
 	//Atributos
 	private int cod;
