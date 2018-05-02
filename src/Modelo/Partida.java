@@ -5,7 +5,6 @@ public class Partida extends Conector{
 	//Atributos
 	private int cod;
 	private Usuario jugador;
-	private String dificultad;
 	private String ganador;
 	private Nivel nivel;
 
@@ -23,12 +22,7 @@ public class Partida extends Conector{
 	public void setJugador(Usuario jugador) {
 		this.jugador = jugador;
 	}
-	public String getDificultad() {
-		return dificultad;
-	}
-	public void setDificultad(String dificultad) {
-		this.dificultad = dificultad;
-	}
+
 	public String getGanador() {
 		return ganador;
 	}

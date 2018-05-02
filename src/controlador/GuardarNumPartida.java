@@ -2,10 +2,14 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import Modelo.Partida;
 
 public class GuardarNumPartida extends HttpServlet{
 
@@ -17,6 +21,8 @@ public class GuardarNumPartida extends HttpServlet{
 		//out.print(numPartidas);
 		
 		//guardar partidas en la BBDD
+		
+		
 		
 		
 	}

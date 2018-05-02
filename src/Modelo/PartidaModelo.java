@@ -1,6 +1,7 @@
 package Modelo;
 
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -22,7 +23,6 @@ public class PartidaModelo extends Conector{
 				NivelModelo NivelModelo = new NivelModelo();
 				partida.setCod(rs.getInt("cod"));
 				partida.setJugador(usuarioModelo.selectPorCod(rs.getInt("cod")));
-				partida.setDificultad(rs.getString("dificultad"));
 				partida.setGanador(rs.getString("ganador"));
 				partida.setNivel(NivelModelo.select(rs.getInt("cod")));
 						
@@ -34,26 +34,43 @@ public class PartidaModelo extends Conector{
 		return listaPartidas;
 	}
 	
-	public void partidasJugadas(){
-		PartidaModelo partidaModelo = new PartidaModelo();
-		ArrayList<Partida> listaPartidas = partidaModelo.selectAll();
-		int contPartida=0;
-		int contGanado=0;
-		int contPerdido=0;
-		int contEmpate=0;
-		Iterator<Partida> itPartida = listaPartidas.iterator();
-		while (itPartida.hasNext()){
-			Partida partida = itPartida.next();
-			contPartida++;
-			if(partida.getGanador().equals('0')){
-				contGanado++;
-			}else if(partida.getGanador().equals('1')){
-				contPerdido++;
-			}else{
-				contEmpate++;
-			}
+	public void insert(Partida partida) {
+		try {
+			PreparedStatement pst = super.conexion.prepareStatement(
+					"INSERT INTO partidas (cod, jugador, dificultad, ganador, cod_juego) values(?,?,?,?,?)");
+			UsuarioModelo usuarioModelo = new UsuarioModelo();
+			pst.setInt(1, partida.getCod());
+			
+			
+			
+			pst.execute();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
-		System.out.println("El numero de partidad jugadas es: "+contPartida+" ha ganado un total de: "+contGanado+". Ha perdido un total de: "+contPerdido+". Ha empatado un total de: "+contEmpate);
+
 	}
+	
+//	public void partidasJugadas(){
+//		PartidaModelo partidaModelo = new PartidaModelo();
+//		ArrayList<Partida> listaPartidas = partidaModelo.selectAll();
+//		int contPartida=0;
+//		int contGanado=0;
+//		int contPerdido=0;
+//		int contEmpate=0;
+//		Iterator<Partida> itPartida = listaPartidas.iterator();
+//		while (itPartida.hasNext()){
+//			Partida partida = itPartida.next();
+//			contPartida++;
+//			if(partida.getGanador().equals('0')){
+//				contGanado++;
+//			}else if(partida.getGanador().equals('1')){
+//				contPerdido++;
+//			}else{
+//				contEmpate++;
+//			}
+//		}
+//		System.out.println("El numero de partidad jugadas es: "+contPartida+" ha ganado un total de: "+contGanado+". Ha perdido un total de: "+contPerdido+". Ha empatado un total de: "+contEmpate);
+//	}
 
 }
