@@ -12,12 +12,11 @@ public class NivelModelo extends Conector{
 		ArrayList<Nivel> listaJuegos = new ArrayList<Nivel>();
 		try {
 			Statement st = conexion.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM juegos");
+			ResultSet rs = st.executeQuery("SELECT * FROM nivel");
 			while(rs.next()){
 				Nivel juego = new Nivel();
 				juego.setCod(rs.getInt("cod"));
 				juego.setNombre(rs.getString("nombre"));
-				juego.setDificultad(rs.getString("dificultad"));
 				listaJuegos.add(juego);
 			}
 		} catch (SQLException e) {
@@ -28,23 +27,22 @@ public class NivelModelo extends Conector{
 	
 	public Nivel select(int id){
 		// crear juego
-		Nivel juego = new Nivel();
+		Nivel nivel = new Nivel();
 
 		// ejecutar consulta
 		try {
 			Statement st = super.conexion.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM juegos WHERE cod= " + id);
+			ResultSet rs = st.executeQuery("SELECT * FROM nivel WHERE cod= " + id);
 				while (rs.next()) {
-					juego.setCod(rs.getInt("cod"));
-					juego.setNombre(rs.getString("nombre"));
-					juego.setDificultad(rs.getString("dificultad"));
+					nivel.setCod(rs.getInt("cod"));
+					nivel.setNombre(rs.getString("nombre"));
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				// devolver juego
-				return juego;
+				return nivel;
 	}
 
 }

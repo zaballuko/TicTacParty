@@ -8,7 +8,6 @@ public class Nivel extends Conector{
 	//Atributos
 	private int cod;
 	private String nombre;
-	private String dificultad;
 	private ArrayList<Partida> partidas;
 	
 	
@@ -25,12 +24,6 @@ public class Nivel extends Conector{
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public String getDificultad() {
-		return dificultad;
-	}
-	public void setDificultad(String dificultad) {
-		this.dificultad = dificultad;
 	}
 	public ArrayList<Partida> getPartidas() {
 		return partidas;
