@@ -5,12 +5,12 @@
      Servlets de ejemplo para practicar
   </description>
   <servlet>
-    <servlet-name>GuardarNumPartida</servlet-name>
-    <servlet-class>controlador.GuardarNumPartida</servlet-class>
+    <servlet-name>GuardarPartida</servlet-name>
+    <servlet-class>controlador.GuardarPartida</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>GuardarNumPartida</servlet-name>
-    <url-pattern>/GuardarNumPartida</url-pattern>
+    <servlet-name>GuardarPartida</servlet-name>
+    <url-pattern>/GuardarPartida</url-pattern>
   </servlet-mapping>
 
   
