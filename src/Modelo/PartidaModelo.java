@@ -23,7 +23,7 @@ public class PartidaModelo extends Conector{
 				NivelModelo NivelModelo = new NivelModelo();
 				partida.setCod(rs.getInt("cod"));
 				partida.setJugador(usuarioModelo.selectPorCod(rs.getInt("jugador")));
-				partida.setGanador(rs.getString("ganador"));
+				partida.setGanador(rs.getInt("ganador"));
 				partida.setNivel(NivelModelo.select(rs.getInt("nivel")));
 						
 				listaPartidas.add(partida);
@@ -37,15 +37,14 @@ public class PartidaModelo extends Conector{
 	public void insert(Partida partida) {
 		try {
 			PreparedStatement pst = super.conexion.prepareStatement(
-					"INSERT INTO partidas (cod, jugador, ganador, cod_juego) values(?,?,?,?,?)");
-			UsuarioModelo usuarioModelo = new UsuarioModelo();
-			pst.setInt(1, partida.getCod());
-			pst.setInt(2, usuarioModelo.selectPorCod(9).getCod());
+					"INSERT INTO partidas (jugador, ganador, nivel) values(?,?,?)");
+			pst.setInt(1, partida.getJugador().getCod());
+			pst.setInt(2, partida.getGanador());
+			pst.setInt(3, 3);
+			pst.execute();
 			/*Codigo del usuario con sesion iniciada durante esa partida*/
 			/*Añadir en el index del juego el valor del Usuario Ganador
 			 */
-			
-			pst.execute();
 
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -17,30 +17,36 @@ import Modelo.UsuarioModelo;
 public class GuardarPartida extends HttpServlet{
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		String ganada = request.getParameter("ganada");
-		int ganadaInt = Integer.parseInt(ganada);
-		
 		response.setHeader("Access-Control-Allow-Origin","*");
 		response.setContentType("text/html");
-		//PrintWriter out = response.getWriter();
-		PartidaModelo partidaModelo = new PartidaModelo();
-		
-		Usuario jugador = new Usuario();
-		UsuarioModelo usuarioModelo = new UsuarioModelo();
-		
-		jugador = usuarioModelo.selectPorCod();
-		
-		
-		Partida partida = new Partida();
-		partida.setGanador(ganadaInt);
-		partida.setJugador(jugador);
 
-		partidaModelo.insert(partida);
 		
-		//guardar partidas en la BBDD
+		String resultadoString = request.getParameter("resultadoPartida");
+		int resultado = Integer.parseInt(resultadoString);
+		PrintWriter out = response.getWriter();
+		out.println("resultado: " + resultado);
 		
-	
-		
+//		//el usuario se guardara en la sesion Todo
+//		int idUsuario= 7; 
+//	
+//		response.setHeader("Access-Control-Allow-Origin","*");
+//		response.setContentType("text/html");
+//	
+//		PartidaModelo partidaModelo = new PartidaModelo();
+//		Usuario jugador = new Usuario();
+//		
+//		jugador.setCod(idUsuario);
+//		
+//		Partida partida = new Partida();
+//		
+//		partida.setGanador(resultado);
+//		partida.setJugador(jugador);
+//		partida.setNivel(null);
+//		partidaModelo.insert(partida);
+//		
+//		//guardar partidas en la BBDD
+
+//		
 		
 		
 	}
