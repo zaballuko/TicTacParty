@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import Modelo.Partida;
 import Modelo.PartidaModelo;
+import Modelo.Usuario;
+import Modelo.UsuarioModelo;
 
 public class GuardarPartida extends HttpServlet{
 
@@ -23,14 +25,17 @@ public class GuardarPartida extends HttpServlet{
 		//PrintWriter out = response.getWriter();
 		PartidaModelo partidaModelo = new PartidaModelo();
 		
+		Usuario jugador = new Usuario();
+		UsuarioModelo usuarioModelo = new UsuarioModelo();
+		
+		jugador = usuarioModelo.selectPorCod();
+		
+		
 		Partida partida = new Partida();
 		partida.setGanador(ganadaInt);
-		partida.setCod(cod);
-		
-		
-		
+		partida.setJugador(jugador);
+
 		partidaModelo.insert(partida);
-		//out.print(numPartidas);
 		
 		//guardar partidas en la BBDD
 		
