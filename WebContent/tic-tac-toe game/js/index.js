@@ -108,6 +108,7 @@ function GameUi() {
 				case 'player':
 					oEndInfo.innerHTML = 'winner';
 					contadorGanar++;
+
 					audio.play();
 					
 					break;
@@ -117,10 +118,9 @@ function GameUi() {
 					break;
 			}
 			contadorPartidas++;
-			
 
 			//enviar datos a jsp para guardar numero departidas
-					$.post( "http://localhost:8080/TicTacParty/GuardarPartida",  { numPartidas: contadorPartidas, numGanadas: contadorGanar })
+					$.post( "/TicTacParty/GuardarPartida",  { numGanadas: contadorGanar })
   						.done(function( data ) {
    							alert( "Data Loaded: " + data );
   					});
