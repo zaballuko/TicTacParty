@@ -93,7 +93,7 @@ h6 {
     background-size: cover;
 }
 
-.mastheadd {
+.masthead2 {
     min-height: 30rem;
     position: relative;
     display: table;
@@ -102,6 +102,20 @@ h6 {
     padding-top: 8rem;
     padding-bottom: 8rem;
     background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 100%), url(../img/kratos2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.masthead3 {
+    min-height: 30rem;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 100%), url(../img/kratos3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

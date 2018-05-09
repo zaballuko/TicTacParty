@@ -91,4 +91,29 @@ public class UsuarioModelo extends Conector{
 		return listaRanking;
 	}
 	
+	public Usuario selectPorEmailContrasena(String email, String contrasena){
+		
+		Statement st;
+		ResultSet rs;
+		try {
+			st = super.conexion.createStatement();
+			rs = st.executeQuery("SELECT * FROM usuarios WHERE email='" + email + "'" + "AND contrasena='" + contrasena + "'");
+			if(rs.next()){
+				Usuario usuario = new Usuario();
+				usuario.setCod(rs.getInt(1));
+				usuario.setEmail(rs.getString(2));
+				usuario.setContrasena(rs.getString(3));
+				usuario.setNombre(rs.getString(4));
+				usuario.setApellidos(rs.getString(5));
+				usuario.setEdad(rs.getInt(6));
+				usuario.setRol(rs.getString(7));
+				usuario.setTelefono(rs.getInt(8));
+				return usuario;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 }
