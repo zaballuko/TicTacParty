@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet{
 		if (usuario.getEmail().equals(email) && usuario.getContrasena().equals(contrasena)) {
 			request.setAttribute("usuario", email);  
 			
-			response.sendRedirect("www/pages/prueba.jsp");
+			response.sendRedirect("www/pages/panelControl.jsp");
 		} else {
 
 		}
