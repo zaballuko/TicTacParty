@@ -91,6 +91,12 @@ public class UsuarioModelo extends Conector{
 		return listaRanking;
 	}
 	
+	/**
+	 * Hace un select en la BBDD con los parametros email y contrasena
+	 * @param email parametro email
+	 * @param contrasena parametro contrasena
+	 * @return usuario devuelve un usuario si la consulta se realiza con exito
+	 */
 	public Usuario selectPorEmailContrasena(String email, String contrasena){
 		
 		Statement st;
@@ -114,6 +120,27 @@ public class UsuarioModelo extends Conector{
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	/**
+	 * Inserta un usuario en la BBDD
+	 * @param usuario Recibe un usuario
+	 */
+	public void insertUsuario(Usuario usuario) {
+		try {
+			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO usuarios (email,contrasena,nombre,apellidos,edad,rol,telefono) VALUES(?,?,?,?,?,?,?)");
+			pst.setString(1, usuario.getEmail());
+			pst.setString(2, usuario.getContrasena());
+			pst.setString(3, usuario.getNombre());
+			pst.setString(4, usuario.getApellidos());
+			pst.setInt(5, usuario.getEdad());
+			pst.setString(6, usuario.getRol());
+			pst.setInt(7, usuario.getTelefono());
+			pst.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 }

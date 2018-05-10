@@ -24,4 +24,13 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+	<servlet-name>CreateAcc</servlet-name>
+    <servlet-class>controlador.CreateAcc</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>CreateAcc</servlet-name>
+    <url-pattern>/createAcc</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
