@@ -23,14 +23,13 @@ public class GuardarPartida extends HttpServlet{
 		
 		String resultadoString = request.getParameter("resultadoPartida");
 		int resultado = Integer.parseInt(resultadoString);
-		PrintWriter out = response.getWriter();
-		out.println("resultado: " + resultado);
+		
 		
 //		//el usuario se guardara en la sesion Todo
 //		int idUsuario= 7; 
 //	
-//		response.setHeader("Access-Control-Allow-Origin","*");
-//		response.setContentType("text/html");
+		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setContentType("text/html");
 //	
 //		PartidaModelo partidaModelo = new PartidaModelo();
 //		Usuario jugador = new Usuario();
@@ -43,8 +42,9 @@ public class GuardarPartida extends HttpServlet{
 //		partida.setJugador(jugador);
 //		partida.setNivel(null);
 //		partidaModelo.insert(partida);
-//		
-//		//guardar partidas en la BBDD
+
+		PrintWriter out = response.getWriter();
+		out.println("resultado: " + resultado);
 
 //		
 		
