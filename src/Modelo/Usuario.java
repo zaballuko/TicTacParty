@@ -2,21 +2,8 @@ package Modelo;
 
 import java.util.ArrayList;
 
-public class Usuario extends Conector{
-	
-	//Constructores
-	public Usuario(){
-	}
-	
-	public Usuario(String email,String contrasena,String nombre,String apellidos,int edad,String rol,int telefono){
-		this.email=email;
-		this.contrasena=contrasena;
-		this.nombre=nombre;
-		this.apellidos=apellidos;
-		this.edad=edad;
-		this.rol=rol;
-		this.telefono=telefono;
-	}
+
+public class Usuario{
 
 	//Atributos
 	private int cod;
@@ -29,6 +16,20 @@ public class Usuario extends Conector{
 	private int telefono;
 	private ArrayList<Partida> partidas;
 	
+	
+	//Constructores
+		public Usuario(){
+		}
+		
+		public Usuario(String email,String contrasena,String nombre,String apellidos,int edad,String rol,int telefono){
+			this.email=email;
+			this.contrasena=contrasena;
+			this.nombre=nombre;
+			this.apellidos=apellidos;
+			this.edad=edad;
+			this.rol=rol;
+			this.telefono=telefono;
+		}
 	//Getters y Setters
 	public int getCod() {
 		return cod;

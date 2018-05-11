@@ -89,50 +89,44 @@ function GameUi() {
 		},
 		endScreen = function() {
 			var audio = new Audio('audio/audiooh.mp3');
-			
+			var contadorGanar = 0;
+			var contadorPerder = 0;
+			var contadorEmpatar =0;
 			var contadorPartidas = 0;
 			var oScreen = Tool.getE('#end_screen');
 			var oEndInfo = Tool.getE('#end_info');
-
-			var resultadoPartida;
+			
 			
 			switch(oCtrl.getWinner()) {
 				case 'ai':
-				//Partida perdida 0
 					oEndInfo.innerHTML = 'ohh..';
+					contadorPerder++;
 					audio.play();
-					audio.pause(); 
-					resultadoPartida=0;
+				
 
 					break;
 				case 'player':
-				//partida ganada 1
 					oEndInfo.innerHTML = 'winner';
+					contadorGanar++;
+
 					audio.play();
-					audio.pause(); 
-					resultadoPartida=1;
+					
 					break;
 				case 'no':
-				//partida empatada 2
 					oEndInfo.innerHTML = 'Empate';
-					resultadoPartida=2;
+					contadorEmpatar++;
 					break;
 			}
 			contadorPartidas++;
 
-					/*Ejecuta el servlet*/
-					$.post("http://localhost:8081/TicTacParty/GuardarPartida",  { resultadoPartida: resultadoPartida })
+			//enviar datos a jsp para guardar numero departidas
+					$.post( "/TicTacParty/GuardarPartida",  { numGanadas: contadorGanar })
   						.done(function( data ) {
-   							alert( data );
-  						})
-  						  .fail(function() {
-						   alert( "error" );
-						 });
+   							alert( "Data Loaded: " + data );
+  					});
 
 			oScreen.style['display'] = 'block';
-			var btnRestart = Tool.getE('#btn_restart','#btn_exit');
-
-				/*Poner un boton de reedirigir al inicio*/
+			var btnRestart = Tool.getE('#btn_restart');
 				btnRestart.onclick = function() {
 				oScreen.style['display'] = 'none';
 				oCtrl.startGame();

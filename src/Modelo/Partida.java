@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Partida extends Conector{
+public class Partida{
 	
 	//Atributos
 	private int cod;

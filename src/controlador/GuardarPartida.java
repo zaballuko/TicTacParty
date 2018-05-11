@@ -17,32 +17,39 @@ import Modelo.UsuarioModelo;
 public class GuardarPartida extends HttpServlet{
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		String ganada = request.getParameter("ganada");
-		int ganadaInt = Integer.parseInt(ganada);
 		
 		response.setHeader("Access-Control-Allow-Origin","*");
 		response.setContentType("text/html");
-		//PrintWriter out = response.getWriter();
-		PartidaModelo partidaModelo = new PartidaModelo();
-		
-		Usuario jugador = new Usuario();
-		UsuarioModelo usuarioModelo = new UsuarioModelo();
-		
-		jugador = usuarioModelo.selectPorCod();
-		
-		
-		Partida partida = new Partida();
-		partida.setGanador(ganadaInt);
-		partida.setJugador(jugador);
 
+		//recoge el parametro resultadoPartidal de JavaScript y lo pasa a tipo int
+		
+		String resultadoString = request.getParameter("resultadoPartida");
+		int resultado = Integer.parseInt(resultadoString);
+		
+		//Para que funcione el acceso a los datos	
+		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setContentType("text/html");
+	
+		PartidaModelo partidaModelo = new PartidaModelo();
+		Usuario jugador = new Usuario();
+		
+		//Usuario Fijo ToDo	
+		int idUsuario= 7; 
+		jugador.setCod(idUsuario);
+		
+		//Creamos una nueva Partida y le damos los datos que ha recogido el servlet
+		Partida partida = new Partida();
+		partida.setGanador(resultado);
+		partida.setJugador(jugador);
+		partida.setNivel(null);
+		
+		//Insertamos la nueva partida en la BBDD
 		partidaModelo.insert(partida);
 		
-		//guardar partidas en la BBDD
-		
-	
-		
-		
-		
+		//Sacamos por pantalla para verificar el resultado
+		PrintWriter out = response.getWriter();
+		out.println("resultado: " + resultado);
+
 	}
 	
 	
