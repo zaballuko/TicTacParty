@@ -34,5 +34,5 @@
 	<servlet-name>CreateAcc</servlet-name>
     <url-pattern>/createAcc</url-pattern>
   </servlet-mapping>
-  
+
 </web-app>
