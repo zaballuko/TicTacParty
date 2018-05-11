@@ -3,7 +3,7 @@ package Modelo;
 
 import java.util.ArrayList;
 
-public class Nivel extends Conector{
+public class Nivel{
 
 	//Atributos
 	private int cod;

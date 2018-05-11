@@ -89,6 +89,7 @@ function GameUi() {
 		},
 		endScreen = function() {
 			var audio = new Audio('audio/audiooh.mp3');
+			
 			var contadorPartidas = 0;
 			var oScreen = Tool.getE('#end_screen');
 			var oEndInfo = Tool.getE('#end_info');
@@ -100,6 +101,7 @@ function GameUi() {
 				//Partida perdida 0
 					oEndInfo.innerHTML = 'ohh..';
 					audio.play();
+					audio.pause(); 
 					resultadoPartida=0;
 
 					break;
@@ -107,6 +109,7 @@ function GameUi() {
 				//partida ganada 1
 					oEndInfo.innerHTML = 'winner';
 					audio.play();
+					audio.pause(); 
 					resultadoPartida=1;
 					break;
 				case 'no':
@@ -125,7 +128,7 @@ function GameUi() {
 
 			oScreen.style['display'] = 'block';
 			var btnRestart = Tool.getE('#btn_restart');
-			
+
 				btnRestart.onclick = function() {
 				oScreen.style['display'] = 'none';
 				oCtrl.startGame();

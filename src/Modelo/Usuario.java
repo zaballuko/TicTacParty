@@ -2,7 +2,7 @@ package Modelo;
 
 import java.util.ArrayList;
 
-public class Usuario extends Conector{
+public class Usuario{
 
 	//Atributos
 	private int cod;
