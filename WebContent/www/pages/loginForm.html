@@ -8,30 +8,32 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 		<!-- CSS para el Login -->
-		<link rel="stylesheet" type="text/css" href="css/cssLogin.css">
+		<link rel="stylesheet" type="text/css" href="../css/cssLogin.css">
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" class="masthead3 d-flex">
 			<div class="row">
 				<div class="main">
-					<h3>Por favor inicia sesión o <a href="crearCuenta.html">Crear una cuenta</a></h3>
-
-					<form role="form" action="loginServlet.java" method="post">
-						<div class="form-group">
-							<label for="inputUsernameEmail">Email</label>
-							<input type="text" name="email" class="form-control" placeholder="Email">
-						</div>
-						<div class="form-group">
-							<label for="inputPassword">Contraseña</label>
-							<input type="password" name="contrasena" class="form-control" placeholder="Contraseña">
-						</div>
-						<div class="checkbox pull-right">
-							<label>
-								<input type="checkbox">Recordarme
-							</label>
-						</div>
-						<button type="submit" class="btn btn btn-primary">Entrar</button>
-					</form><br />
+					<header>
+						<h3>Por favor inicia sesión o <a href="crearCuenta.html">Crear una cuenta</a></h3>
+					
+						<form action="/TicTacParty/login" method="post">
+							<div class="form-group">
+								<label for="inputUsernameEmail">Email</label>
+								<input type="text" name="email" class="form-control" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label for="inputPassword">Contraseña</label>
+								<input type="password" name="contrasena" class="form-control" placeholder="Contraseña">
+							</div>
+							<div class="checkbox pull-right">
+								<label>
+									<input type="checkbox">Recordarme
+								</label>
+							</div>
+							<button type="submit" class="btn btn btn-primary">Entrar</button>
+						</form><br />
+					</header>
 					<button onclick="location.href='../index.html'" class="btn btn btn-primary">Volver a inicio</button>
 				</div>
 			</div>

@@ -15,6 +15,6 @@ public class Main {
 			System.out.println("El usuario es " + usuario.getNombre());
 		}
 		PartidaModelo partidaModelo = new PartidaModelo();
+	
 	}
-
 }
