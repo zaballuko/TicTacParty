@@ -124,11 +124,15 @@ function GameUi() {
 					$.post("http://localhost:8081/TicTacParty/GuardarPartida",  { resultadoPartida: resultadoPartida })
   						.done(function( data ) {
    							alert( data );
-  					});
+  						})
+  						  .fail(function() {
+						   alert( "error" );
+						 });
 
 			oScreen.style['display'] = 'block';
-			var btnRestart = Tool.getE('#btn_restart');
+			var btnRestart = Tool.getE('#btn_restart','#btn_exit');
 
+				/*Poner un boton de reedirigir al inicio*/
 				btnRestart.onclick = function() {
 				oScreen.style['display'] = 'none';
 				oCtrl.startGame();

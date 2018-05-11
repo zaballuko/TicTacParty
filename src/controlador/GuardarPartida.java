@@ -33,23 +33,23 @@ public class GuardarPartida extends HttpServlet{
 		PartidaModelo partidaModelo = new PartidaModelo();
 		Usuario jugador = new Usuario();
 		
+		//Usuario Fijo ToDo	
 		int idUsuario= 7; 
 		jugador.setCod(idUsuario);
 		
+		//Creamos una nueva Partida y le damos los datos que ha recogido el servlet
 		Partida partida = new Partida();
-		
 		partida.setGanador(resultado);
 		partida.setJugador(jugador);
 		partida.setNivel(null);
 		
+		//Insertamos la nueva partida en la BBDD
 		partidaModelo.insert(partida);
-
+		
+		//Sacamos por pantalla para verificar el resultado
 		PrintWriter out = response.getWriter();
 		out.println("resultado: " + resultado);
 
-//		
-		
-		
 	}
 	
 	
