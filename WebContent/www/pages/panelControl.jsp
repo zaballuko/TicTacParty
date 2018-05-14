@@ -25,7 +25,7 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 </head>
-<body id="page-top">
+<body id="page-top"> 
 <%
 out.println(usuario.getNombre());
 out.println(iniciado);
