@@ -36,13 +36,11 @@ public class PartidaModelo extends Conector{
 	
 	public void insert(Partida partida) {
 		try {
-			PreparedStatement pst = super.conexion.prepareStatement(
-					"INSERT INTO partidas (jugador, ganador, nivel) values(?,?,?)");
+			PreparedStatement pst = super.conexion.prepareStatement("INSERT INTO partidas (jugador, ganador, nivel) values(?,?,?)");
 			pst.setInt(1, partida.getJugador().getCod());
 			pst.setInt(2, partida.getGanador());
 			pst.setInt(3, 3);
 			pst.execute();
-			/*Codigo del usuario con sesion iniciada durante esa partida*/
 			/*Añadir en el index del juego el valor del Usuario Ganador
 			 */
 

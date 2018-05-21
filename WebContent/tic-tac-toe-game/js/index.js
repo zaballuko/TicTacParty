@@ -89,9 +89,7 @@ function GameUi() {
 		},
 		endScreen = function() {
 			var audio = new Audio('audio/audiooh.mp3');
-			var contadorGanar = 0;
-			var contadorPerder = 0;
-			var contadorEmpatar =0;
+			var resultadoPartida =0;
 			var contadorPartidas = 0;
 			var oScreen = Tool.getE('#end_screen');
 			var oEndInfo = Tool.getE('#end_info');
@@ -100,29 +98,29 @@ function GameUi() {
 			switch(oCtrl.getWinner()) {
 				case 'ai':
 					oEndInfo.innerHTML = 'ohh..';
-					contadorPerder++;
+					resultadoPartida= 0;
 					audio.play();
 				
 
 					break;
 				case 'player':
 					oEndInfo.innerHTML = 'winner';
-					contadorGanar++;
+					resultadoPartida=1;
 
 					audio.play();
 					
 					break;
 				case 'no':
 					oEndInfo.innerHTML = 'Empate';
-					contadorEmpatar++;
+					resultadoPartida=2;
 					break;
 			}
 			contadorPartidas++;
 
-			//enviar datos a jsp para guardar numero departidas
-					$.post( "/TicTacParty/GuardarPartida",  { numGanadas: contadorGanar })
+			//enviar datos al servlet para guardar numero departidas sin tener que refrescar la pagina Parametro: valor
+					$.post( "http://10.14.3.86:8081/TicTacParty/GuardarPartida",  { resultadoPartida: resultadoPartida })
   						.done(function( data ) {
-   							alert( "Data Loaded: " + data );
+   							alert( data );
   					});
 
 			oScreen.style['display'] = 'block';

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Modelo.Partida;
 import Modelo.PartidaModelo;
@@ -18,6 +19,7 @@ public class GuardarPartida extends HttpServlet{
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
+		//Para que funcione el acceso a los datos	
 		response.setHeader("Access-Control-Allow-Origin","*");
 		response.setContentType("text/html");
 
@@ -25,17 +27,19 @@ public class GuardarPartida extends HttpServlet{
 		
 		String resultadoString = request.getParameter("resultadoPartida");
 		int resultado = Integer.parseInt(resultadoString);
+
 		
-		//Para que funcione el acceso a los datos	
-		response.setHeader("Access-Control-Allow-Origin","*");
-		response.setContentType("text/html");
-	
-		PartidaModelo partidaModelo = new PartidaModelo();
-		Usuario jugador = new Usuario();
+		//Codigo del usuario con sesion iniciada durante esa partida
 		
-		//Usuario Fijo ToDo	
-		int idUsuario= 7; 
-		jugador.setCod(idUsuario);
+		//con session de jsp a servlet
+		PrintWriter out = response.getWriter();
+		
+		HttpSession session = request.getSession();
+		Usuario jugador = (Usuario)session.getAttribute("usuario");
+		
+				//		Usuario jugador = new Usuario();
+				//		int idjugador= 7;
+				//		idjugador = jugador.getCod();
 		
 		//Creamos una nueva Partida y le damos los datos que ha recogido el servlet
 		Partida partida = new Partida();
@@ -44,11 +48,18 @@ public class GuardarPartida extends HttpServlet{
 		partida.setNivel(null);
 		
 		//Insertamos la nueva partida en la BBDD
+		PartidaModelo partidaModelo = new PartidaModelo();
 		partidaModelo.insert(partida);
 		
 		//Sacamos por pantalla para verificar el resultado
-		PrintWriter out = response.getWriter();
-		out.println("resultado: " + resultado);
+		
+		if (resultado == 1) {
+			out.println("Has Ganado y se ha guardado a la base de datos");
+		}else if(resultado == 0){
+			out.println("Has perdido y se ha guardado a la base de datos");			
+		}else{
+			out.println("Has empatado y se ha guardado a la base de datos");
+		}
 
 	}
 	
