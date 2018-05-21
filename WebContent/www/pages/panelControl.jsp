@@ -31,7 +31,6 @@
 	<body id="page-top"> 
 	<header class="masthead4">
 		<%
-		out.println(listaNiveles.get(0) + "," + listaNiveles.get(1) + "," + listaNiveles.get(2) + ",");
 		%>
 		<div class="container text-center my-auto">
 			<h1>Panel de control</p>
