@@ -30,10 +30,9 @@
 	<body id="page-top"> 
 	<header class="masthead4">
 		<div class="container text-center my-auto">
-			<h1>Panel de control</p>
+			<h1>Panel de control</h1>
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarNivelesServlet">Ver lista niveles</a>
-			
-        	<a class="btn btn-primary btn-xl js-scroll-trigger" href="www/jsp/logout.jsp">Logout</a>
+        	<a class="btn btn-primary btn-xl js-scroll-trigger" href="../jsp/logout.jsp">Logout</a>
 		</div>
 	</header>
 	</body>
