@@ -23,7 +23,7 @@
 </head>
 <body>
 	<c:forEach items="${listaNiveles}" var="nivel">
-		<a class="btn btn-primary btn-xl js-scroll-trigger">Jugar ${nivel.nombre}</a><br />
+		<a class="btn btn-primary btn-xl js-scroll-trigger" href="tic-tac-toe-game/juegoTicTacToe.html">Jugar ${nivel.nombre}</a><br />
 	</c:forEach>
 
 </body>
