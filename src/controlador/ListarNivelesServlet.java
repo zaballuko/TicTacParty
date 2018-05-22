@@ -19,7 +19,7 @@ public class ListarNivelesServlet extends HttpServlet{
 		if (listaNiveles != null){		
 			//Crear y mandar atributo listaNiveles a panelControl.jsp
 			request.setAttribute("listaNiveles", listaNiveles);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("www/pages/panelControl.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("www/jsp/listaNiveles.jsp");
 			dispatcher.forward(request,response);
 		} else {
 		}

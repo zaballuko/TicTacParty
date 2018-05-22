@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page import="Modelo.Usuario"%>
 <%@page import="Modelo.Nivel"%>
 <%@page import="java.util.ArrayList" %>
-<%Usuario usuario = (Usuario)request.getAttribute("usuario");%>
-<%Boolean iniciado = (Boolean)request.getSession().getAttribute("iniciado");%>
-<%ArrayList<Nivel> listaNiveles = (ArrayList<Nivel>)request.getAttribute("listaNiveles");%>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -30,10 +29,9 @@
 	</head>
 	<body id="page-top"> 
 	<header class="masthead4">
-		<%
-		%>
 		<div class="container text-center my-auto">
 			<h1>Panel de control</p>
+			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarNivelesServlet">Ver lista niveles</a>
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="tic-tac-toe-game/juegoTicTacToe.html">Jugar 3 en raya</a>
         	<a class="btn btn-primary btn-xl js-scroll-trigger" href="www/jsp/logout.jsp">Logout</a>
 		</div>

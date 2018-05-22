@@ -34,5 +34,14 @@
 	<servlet-name>CreateAcc</servlet-name>
     <url-pattern>/createAcc</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ListarNivelesServlet</servlet-name>
+    <servlet-class>controlador.ListarNivelesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ListarNivelesServlet</servlet-name>
+    <url-pattern>/ListarNivelesServlet</url-pattern>
+  </servlet-mapping>
 
 </web-app>
