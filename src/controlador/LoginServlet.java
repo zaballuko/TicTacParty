@@ -32,8 +32,9 @@ public class LoginServlet extends HttpServlet{
 			//Crear atributo usuario con el usuario que ha iniciado sesion y enviarsela a la pagina panelControl.jsp
 			session.setAttribute("usuario", usuario);
 			
-			RequestDispatcher dispatcher = request.getRequestDispatcher("www/pages/panelControl.jsp");
-			dispatcher.forward(request,response);
+//			RequestDispatcher dispatcher = request.getRequestDispatcher("www/pages/panelControl.jsp");
+//			dispatcher.forward(request,response);
+			response.sendRedirect("www/pages/panelControl.jsp");
 		} else {
 
 		}
