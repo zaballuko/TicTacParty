@@ -43,5 +43,14 @@
 	<servlet-name>ListarNivelesServlet</servlet-name>
     <url-pattern>/ListarNivelesServlet</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+	<servlet-name>ListarJuegoServlet</servlet-name>
+    <servlet-class>controlador.ListarJuegoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ListarJuegoServlet</servlet-name>
+    <url-pattern>/ListarJuegoServlet</url-pattern>
+  </servlet-mapping>
 
 </web-app>
