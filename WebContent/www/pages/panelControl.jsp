@@ -31,6 +31,7 @@
 	<header class="masthead4">
 		<div class="container text-center my-auto">
 			<h1>Panel de control</h1>
+			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarJuegoServLet">Ver lista juegos</a>
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarNivelesServlet">Ver lista niveles</a>
         	<a class="btn btn-primary btn-xl js-scroll-trigger" href="../jsp/logout.jsp">Logout</a>
 		</div>

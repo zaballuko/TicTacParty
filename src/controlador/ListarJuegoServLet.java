@@ -5,15 +5,17 @@ import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Modelo.*;
 
-public class ListarJuegoServLet {
+public class ListarJuegoServLet extends HttpServlet{
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		
 		JuegoModelo juegoModelo = new JuegoModelo();
 		ArrayList<Juego> listarJuegos = juegoModelo.selectAll();
 		if (listarJuegos != null){		
