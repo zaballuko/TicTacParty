@@ -132,77 +132,13 @@ a {
 <title>listar Partidas</title>
 </head>
 <body>
-	<div id="container">
-		<header>
-
-
-		<h1>Ranking Jugadores</h1>
-		</header>
-
-		<div class="table-responsive"
-			class="col-xs-2 col-sm-4 col-md-6 col-lg-12" id="container">
-			<table class="table table-striped table-hover" id="table_id"
-				class="display">
-				<thead>
-					<tr>
-						<th>Nombre</th>
-						<th>Email</th>
-						<th>Apellidos</th>
-						<th>Edad</th>
-					</tr>
-				</thead>
-				<tbody>
-
-					<%
-					UsuarioModelo usuarioModelo = new UsuarioModelo();
-					
-					ArrayList<Usuario> usuarios = usuarioModelo.selectRanking();
-		
-					Iterator<Usuario> i = usuarios.iterator();
-					while (i.hasNext()) {
-						Usuario usuario = i.next();		
-						
-						out.print("<tr>");
-						
-						
-						out.print("<td>" + usuario.getCod() + "</td><td>" + usuario.getNombre()
-								+ "</td><td><a style href='#" + usuario.getEmail()
-								+ "'>Ver</a>/<a id='eliminar'' href='#" + usuario.getApellidos()
-								+ "'>Eliminar</a>/<a id='editar' href='#" + usuario.getEdad()
-								+ "'>Editar</a></td></tr>");
-					}
-						
-						
-						/* if(libro.estaPrestado()){//esta entregado
-							out.print("<td style='background-color: tomato'>Falta por entregar</td>");
-							
-						}else{
-							out.print("<td style='background-color: #80ff80'>Esta entregado</td>");
-						}
-					out.print("</tr>"); */
- //jsp interrogacion parametro = valor & interrogacion parametro = valor
-				
-					
-							
-							
-				%>
-				</tbody>
-			</table>
-		</div>
-		<br><a class="btn btn-primary btn-xl js-scroll-trigger" href="../pages/panelControl.jsp">Volver</a> <a class="btn btn-primary btn-xl js-scroll-trigger" href="../www/jsp/logout.jsp">Logout</a>
-
-		<div class="modal fade">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<img class="img-responsive" style="width: 100%" src="image/qr.jpg">
-				</div>
-			</div>
-		</div>
-		<div class="toggle-ios">
-			<input type="checkbox" id="notification" checked /> <label
-				for="notification"></label>
-		</div>
-	</div>
+<table>
+	<c:forEach items="${listaPartidas}" var="partida">
+		<tr>
+			<td>${partida.jugador.nombre}</td>
+		</tr>
+	</c:forEach>
+</table>
 </body>
 
 </html>
