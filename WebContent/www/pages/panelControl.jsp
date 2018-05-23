@@ -14,7 +14,7 @@
    	 	<meta name="description" content="">
     	<meta name="author" content="">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+		<link rel="stylesheet" href="../css/estiloControl.css">
     	<title>Panel de control</title>
 
     	
@@ -24,12 +24,13 @@
       <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">TicTacParty</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <li><a  href="/TicTacParty/ListarJuegoServLet">Ver lista juegos</a></li>
+      <li><a href="/TicTacParty/ListarNivelesServlet">Ver lista niveles</a></li>
+      <li><a href="/TicTacParty/ListarPartidas">ListarPartidas</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -40,8 +41,6 @@
 		<div class="container text-center my-auto">
 			<h1>Panel de control</h1>
 			
-			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarJuegoServLet">Ver lista juegos</a>
-			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarNivelesServlet">Ver lista niveles</a>
 		</div>
 	</header>
 	</body>
