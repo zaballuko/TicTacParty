@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import Modelo.Partida;
 import Modelo.PartidaModelo;
 
-public class ListarPartidas extends HttpServlet{
+public class ListarPartidasServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		//conseguir partidas

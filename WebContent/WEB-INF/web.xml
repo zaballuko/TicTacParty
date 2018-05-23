@@ -45,11 +45,11 @@
     <url-pattern>/ListarJuegoServLet</url-pattern>
   </servlet-mapping>
   <servlet>
-	<servlet-name>ListarPartidas</servlet-name>
-    <servlet-class>controlador.ListarPartidas</servlet-class>
+	<servlet-name>ListarPartidasServlet</servlet-name>
+    <servlet-class>controlador.ListarPartidasServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-	<servlet-name>ListarPartidas</servlet-name>
-    <url-pattern>/ListarPartidas</url-pattern>
+	<servlet-name>ListarPartidasServlet</servlet-name>
+    <url-pattern>/ListarPartidasServlet</url-pattern>
   </servlet-mapping>
 </web-app>

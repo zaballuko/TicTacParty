@@ -30,7 +30,7 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a  href="/TicTacParty/ListarJuegoServLet">Ver lista juegos</a></li>
       <li><a href="/TicTacParty/ListarNivelesServlet">Ver lista niveles</a></li>
-      <li><a href="/TicTacParty/ListarPartidas">ListarPartidas</a></li>
+      <li><a href="/TicTacParty/ListarPartidasServlet">ListarPartidas</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
