@@ -13,28 +13,38 @@
    	 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    	 	<meta name="description" content="">
     	<meta name="author" content="">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     	<title>Panel de control</title>
 
-    	<!-- Bootstrap Core CSS -->
-    	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    	<!-- Custom Fonts -->
-    	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    	<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    	<!-- Custom CSS -->
-    	<link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    	
 	</head>
 	<body id="page-top"> 
 	<header class="masthead4">
+      <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <a class="btn btn-danger navbar-btn" href="../jsp/logout.jsp">logout</a>
+    </ul>
+  </div>
+</nav>
 		<div class="container text-center my-auto">
 			<h1>Panel de control</h1>
+			
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarJuegoServLet">Ver lista juegos</a>
 			<a class="btn btn-primary btn-xl js-scroll-trigger" href="/TicTacParty/ListarNivelesServlet">Ver lista niveles</a>
-        	<a class="btn btn-primary btn-xl js-scroll-trigger" href="../jsp/logout.jsp">Logout</a>
 		</div>
 	</header>
 	</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </html>
