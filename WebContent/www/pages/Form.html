@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css">
 </head>
+
 <body>
+	<div class="container">
 	<form action="/TicTacParty/PruebaFormServLet">
-		<select name="provincia">
+		<select class="the-demo" name="provincia">
 				<option value="bizkaia">Bizkaia</option>
 				<option value="guipuzkoa">Guipuzkoa</option>
 		</select>
+
 		<br>
 		He leido pero acxepto las condiciones:
 		<input type="checkbox" value="sideacuerdo" name="deacuerdo"/>
+		<br>
+		<input type="checkbox" value="flor" name="ingredientes"/>flor
+		<br>
+		<input type="checkbox" value="cosa" name="ingredientes" />cosa
+		<br>
+		<input type="checkbox" value="pedo" name="ingredientes" id="pedo"/>
+		<label for="pedo">pedo</label>
 		<br>
 		<input type="submit" value="enviar" name="enviar"/>
 		<br>
 		<input type="submit" name="enviar" value="guardar"/>
 		<br>
+		
 	</form>
+	</div>
 
 </body>
 </html>
