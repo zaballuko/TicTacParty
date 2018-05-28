@@ -53,11 +53,11 @@
     <url-pattern>/ListarPartidasServlet</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>borrarUsuario</servlet-name>
-    <servlet-class>controlador.borrarUsuario</servlet-class>
+    <servlet-name>BorrarUsuario</servlet-name>
+    <servlet-class>controlador.BorrarUsuario</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>borrarUsuario</servlet-name>
-    <url-pattern>/borrarUsuario</url-pattern>
+    <servlet-name>BorrarUsuario</servlet-name>
+    <url-pattern>/BorrarUsuario</url-pattern>
   </servlet-mapping>
 </web-app>

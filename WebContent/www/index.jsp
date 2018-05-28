@@ -41,7 +41,7 @@
 		if(request.getParameter("mensaje")!= null){%>
 				<div class="alert alert-warning alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Agur</strong>Game over
+  <strong>Agur</strong><br>Game over
 </div>	
 		<% }
 		%>
