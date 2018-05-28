@@ -4,5 +4,5 @@
 <%@page import="Modelo.UsuarioModelo"%>
 <%
 	request.getSession().removeAttribute("iniciado");
-	response.sendRedirect("../index.html");
+	response.sendRedirect("../index.jsp");
 %>

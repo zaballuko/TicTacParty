@@ -39,6 +39,7 @@
 			<li><a id="sessionScope"><span
 					class="glyphicon glyphicon-user"></span>
 					${sessionScope.usuario.nombre}</a></li>
+			<li><a href="/TicTacParty/borrarUsuario">delete</a></li>
 			<a class="btn btn-danger navbar-btn" href="../jsp/logout.jsp">logout</a>
 		</ul>
 	</div>
