@@ -140,6 +140,24 @@ public class UsuarioModelo extends Conector{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * Borra un usuario de la base de datos
+	 * @param usuario usuario a borrar
+	 */
+	public void deleteUsuario(Usuario usuario){
+		try {
+			PreparedStatement pst = super.conexion.prepareStatement("DELETE FROM usuarios WHERE cod = ?");
+			pst.setInt(1, usuario.getCod());
+			pst.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateUsuario(Usuario usuario){
 		
 	}
 	
