@@ -35,16 +35,21 @@
 		<div class="container text-center my-auto">
 			<h1 class="mb-1">Bienvenido a TicTacParty</h1>
 			<h3 class="mb-5">
-				<em>Te encantará jugar a nuestros juegos</em>
+				<em>Te encantará jugar a nuestros juegos y nuestras "PIXSAS"</em>
 			</h3>
 					<%
-		if(request.getParameter("mensaje")!= null){%>
-				<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Agur</strong><br>Game over
-</div>	
-		<% }
-		%>
+						if(request.getParameter("mensajeBorrar")!= null){%>
+						<div class="alert alert-danger alert-dismissible" role="alert">
+  							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  							<strong>Agur</strong><br>Game over
+						</div>	
+					<% }if(request.getParameter("mensajeModificar")!=null){%>
+						<div class="alert alert-warning alert-dismissible" role="alert">
+  							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  							<strong>Usuario modificado</strong><br>Vuelve a iniciar sesión, mongolin
+						</div>
+					<%}
+					%>
 			<a class="btn btn-primary btn-xl js-scroll-trigger"
 				href="pages/crearCuenta.html">Crear cuenta</a> <a
 				class="btn btn-primary btn-xl js-scroll-trigger"

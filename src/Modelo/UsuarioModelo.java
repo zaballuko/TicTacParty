@@ -157,8 +157,24 @@ public class UsuarioModelo extends Conector{
 		}
 	}
 	
-	public void updateUsuario(Usuario usuario){
-		
-	}
+	public void updateUsuario(Usuario usuario, int codUsuario){
+				
+				try {
+					PreparedStatement pst;
+					pst = super.conexion.prepareStatement("update usuarios set email=?, contrasena=?, nombre=?, apellidos=?, edad=?, telefono=? where cod=?");
+					pst.setString(1, usuario.getEmail());
+					pst.setString(2, usuario.getContrasena());
+					pst.setString(3, usuario.getNombre());
+					pst.setString(4, usuario.getApellidos());
+					pst.setInt(5, usuario.getEdad());
+					pst.setInt(6, usuario.getTelefono());
+					pst.setInt(7, codUsuario);
+
+					pst.executeUpdate();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 	
 }

@@ -44,6 +44,7 @@ color:#007bff;
 </head>
 
 <body>
+
 <a id="button" href="./www/jsp/logout.jsp">Logout</a>
 <a id="button" href="../www/pages/panelControl.jsp">Volver</a>
 

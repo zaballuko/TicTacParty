@@ -30,6 +30,15 @@ public class Usuario{
 			this.rol=rol;
 			this.telefono=telefono;
 		}
+		
+		public Usuario(String email,String contrasena,String nombre,String apellidos,int edad,int telefono){
+			this.email=email;
+			this.contrasena=contrasena;
+			this.nombre=nombre;
+			this.apellidos=apellidos;
+			this.edad=edad;
+			this.telefono=telefono;
+		}
 	//Getters y Setters
 	public int getCod() {
 		return cod;

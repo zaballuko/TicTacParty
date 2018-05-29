@@ -60,4 +60,12 @@
     <servlet-name>BorrarUsuario</servlet-name>
     <url-pattern>/BorrarUsuario</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateUsuario</servlet-name>
+    <servlet-class>controlador.UpdateUsuario</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUsuario</servlet-name>
+    <url-pattern>/UpdateUsuario</url-pattern>
+  </servlet-mapping>
 </web-app>

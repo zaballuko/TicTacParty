@@ -23,7 +23,7 @@ public class BorrarUsuario extends HttpServlet {
 		
 		request.getSession().removeAttribute("usuario");
 		
-		response.sendRedirect("www/index.jsp?mensaje=eliminado");
+		response.sendRedirect("www/index.jsp?mensajeBorrar=eliminado");
 		
 	}
 
