@@ -22,7 +22,9 @@
     <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 </head>
 <body>
+	<!--  por cada item de esa lista recorre y va sacando  a cada item le pongo el nombre con var" "-->
 	<c:forEach items="${listaNiveles}" var="nivel">
+															<--! a cada item un atributo -->									
 		<a class="btn btn-primary btn-xl js-scroll-trigger" href="tic-tac-toe-game/juegoTicTacToe.html">Jugar ${nivel.nombre}</a><br />
 	</c:forEach>
 

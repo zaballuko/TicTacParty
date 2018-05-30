@@ -18,6 +18,8 @@ public class ListarNivelesServlet extends HttpServlet{
 		ArrayList<Nivel> listaNiveles = nivelModelo.selectAll();
 		if (listaNiveles != null){		
 			//Crear y mandar atributo listaNiveles a panelControl.jsp
+			// esto es la variable "" , y esto es lo que quieres meterle (el array)
+
 			request.setAttribute("listaNiveles", listaNiveles);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("www/jsp/listaNiveles.jsp");
 			dispatcher.forward(request,response);
